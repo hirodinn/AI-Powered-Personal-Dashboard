@@ -3,6 +3,7 @@ import EachLoginPage from "./EachLoginPage";
 import "./Login.css";
 export function Login() {
   const [current, setCurrent] = useState(0);
+
   const infos = [
     {
       type: "name",
@@ -35,4 +36,3 @@ export function Login() {
     </div>
   );
 }
-Login;
