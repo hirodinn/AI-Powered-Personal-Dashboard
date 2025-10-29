@@ -5,9 +5,7 @@ function App() {
   const userInfo = useSelector((state) => state.userInfo);
   console.log(userInfo);
   return (
-    <>
-      {Object.entries(userInfo).length === 0 ? <Login /> : <h1>logged in</h1>}
-    </>
+    <>{Object.entries(userInfo).length < 3 ? <Login /> : <h1>logged in</h1>}</>
   );
 }
 
