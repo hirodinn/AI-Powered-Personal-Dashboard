@@ -36,13 +36,27 @@ main .grid-container {
     "chat chat chat chat";
   gap: 15px;
   grid-auto-rows: 165px;
+  grid-auto-columns: 24%;
 }
 main .grid-container > div {
   border-radius: 20px;
+  color: white;
 }
 main .grid-container .clock {
   grid-area: clock;
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+}
+main .grid-container .clock .weather-container {
+  text-align: center;
+}
+main .grid-container .clock .weather-container > div {
+  display: flex;
+  align-items: center;
+  font-size: 29px;
 }
 main .grid-container .weather {
   grid-area: weather;
