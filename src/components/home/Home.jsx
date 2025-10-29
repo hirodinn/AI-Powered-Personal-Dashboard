@@ -33,13 +33,14 @@ export function Home() {
         <div className="grid-container">
           <div className="clock">
             <div>
-              <h1 style={{ fontSize: "70px" }}>
+              <h1 style={{ fontSize: "70px", fontWeight: "normal" }}>
                 {date.toLocaleTimeString([], {
                   hour: "2-digit",
                   minute: "2-digit",
+                  hour12: false,
                 })}
               </h1>
-              <p>
+              <p style={{ fontSize: "14px" }}>
                 {date.toLocaleDateString("en-US", {
                   weekday: "long",
                   month: "long",
@@ -55,9 +56,19 @@ export function Home() {
                       src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                       alt="Weather Icon"
                     />
-                    <h3>{Math.round(weather.main.temp)}°C</h3>
+                    <h3 style={{ fontWeight: "normal" }}>
+                      {Math.round(weather.main.temp)}°
+                    </h3>
                   </div>
-                  <p>{weather.weather[0].description}</p>
+                  <p
+                    style={{
+                      fontSize: "21px",
+                      marginLeft: "10px",
+                      marginTop: "-10px",
+                    }}
+                  >
+                    {weather.weather[0].description}
+                  </p>
                 </>
               )}
             </div>

@@ -41,6 +41,7 @@ main .grid-container {
 main .grid-container > div {
   border-radius: 20px;
   color: white;
+  background: linear-gradient(45deg, #121a23 50%, #232b38);
 }
 main .grid-container .clock {
   grid-area: clock;
@@ -52,25 +53,30 @@ main .grid-container .clock {
 }
 main .grid-container .clock .weather-container {
   text-align: center;
+  background-color: #242f3c;
+  height: 80%;
+  border-radius: 20px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+main .grid-container .clock .weather-container:hover {
+  background-color: #314052;
 }
 main .grid-container .clock .weather-container > div {
   display: flex;
   align-items: center;
   font-size: 29px;
+  margin-top: -10px;
 }
 main .grid-container .weather {
   grid-area: weather;
-  background-color: gray;
 }
 main .grid-container .news {
   grid-area: news;
-  background-color: green;
 }
 main .grid-container .todo {
   grid-area: todo;
-  background-color: aqua;
 }
 main .grid-container .chat {
   grid-area: chat;
-  background-color: blue;
 }
