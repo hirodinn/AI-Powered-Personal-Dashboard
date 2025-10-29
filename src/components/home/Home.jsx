@@ -6,15 +6,21 @@ export function Home() {
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const userInfo = useSelector((state) => state.userInfo);
   const [weather, setWeather] = useState(null);
+  const [news, setNews] = useState([]);
   const date = new Date();
 
   useEffect(() => {
     async function loadData() {
       try {
-        const response = await axios.get(
+        let response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?q=${userInfo.city}&appid=${apiKey}&units=metric`
         );
         setWeather(response.data);
+        response = response = await axios.get(
+          "https://newsapi.org/v2/everything?q=Manchester%united&language=en&apiKey=80c723679fc648faacb6c5ec05c50476"
+        );
+        setNews(response.data.articles.slice(0, 3));
+        console.log(response.data.article.slice(0, 3));
       } catch (error) {
         console.error("Error fetching weather:", error);
       }
@@ -74,7 +80,24 @@ export function Home() {
             </div>
           </div>
           <div className="weather"></div>
-          <div className="news"></div>
+          <div className="news">
+            <h1>Football News</h1>
+            <div className="article-container">
+              {news &&
+                news.map((n, i) => {
+                  return (
+                    <article key={i}>
+                      <img src={n.urlToImage} style={{ width: "100%" }} />
+                      <p className="description">
+                        {n.description.trim().length <= 54
+                          ? n.description
+                          : n.description.trim().slice(0, 55) + "..."}
+                      </p>
+                    </article>
+                  );
+                })}
+            </div>
+          </div>
           <div className="todo"></div>
           <div className="chat"></div>
         </div>

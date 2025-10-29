@@ -73,10 +73,46 @@ main .grid-container .weather {
 }
 main .grid-container .news {
   grid-area: news;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+main .grid-container .news .article-container {
+  width: 100%;
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+}
+main .grid-container .news .article-container article {
+  padding: 10px;
+  height: fit-content;
+  border-radius: 20px;
+  padding-bottom: 15px;
+  background-color: #242f3c;
+  cursor: pointer;
+}
+main .grid-container .news .article-container article:hover {
+  background-color: #314052;
 }
 main .grid-container .todo {
   grid-area: todo;
 }
 main .grid-container .chat {
   grid-area: chat;
+}
+
+@media (max-width: 825px) {
+  main .grid-container .news .article-container .description {
+    display: none;
+  }
+  main .grid-container .news .article-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main .grid-container .news .article-container article {
+    width: 48%;
+  }
 }
