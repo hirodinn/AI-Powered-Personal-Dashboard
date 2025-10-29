@@ -1,8 +1,12 @@
 .home-container {
   background: linear-gradient(45deg, #03070a 50%, #1c232f);
   height: 100vh;
+  background: white;
 }
 main {
+  width: 80%;
+  margin: auto;
+  height: 100vh;
 }
 main .grid-container {
   display: grid;
@@ -12,24 +16,25 @@ main .grid-container {
     "news news weather todo"
     "chat chat chat chat";
   gap: 10px;
+  grid-auto-rows: 160px;
 }
 main .grid-container .clock {
   grid-area: clock;
-  color: black;
+  background-color: black;
 }
 main .grid-container .weather {
   grid-area: weather;
-  color: gray;
+  background-color: gray;
 }
 main .grid-container .news {
   grid-area: news;
-  color: green;
+  background-color: green;
 }
 main .grid-container .todo {
   grid-area: todo;
-  color: aqua;
+  background-color: aqua;
 }
 main .grid-container .chat {
   grid-area: chat;
-  color: blue;
+  background-color: blue;
 }
