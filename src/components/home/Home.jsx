@@ -70,11 +70,12 @@ export function Home() {
                       {Math.round(weather.main.temp)}°
                     </h3>
                   </div>
+                  <p style={{ marginTop: "-15px" }}>{userInfo.city}</p>
                   <p
                     style={{
                       fontSize: "21px",
                       marginLeft: "10px",
-                      marginTop: "-10px",
+                      marginTop: "-5px",
                     }}
                   >
                     {weather.weather[0].description}
@@ -83,7 +84,9 @@ export function Home() {
               )}
             </div>
           </div>
-          <div className="weather"></div>
+          <div className="weather">
+            <h1>Eplore the weather all over the world</h1>
+          </div>
           <div className="news">
             <h1>Football News</h1>
             <div className="article-container">
