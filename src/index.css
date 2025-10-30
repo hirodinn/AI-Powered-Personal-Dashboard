@@ -9,4 +9,6 @@
 #root {
   overflow: hidden;
   background: linear-gradient(45deg, #03070a 50%, #1c232f);
+  width: 100vw;
+  height: 100vh;
 }

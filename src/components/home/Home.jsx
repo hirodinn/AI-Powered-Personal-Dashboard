@@ -58,7 +58,12 @@ export function Home({ weather, news }) {
               )}
             </div>
           </div>
-          <div className="weather">
+          <div
+            className="weather"
+            onClick={() => {
+              navigate("weather");
+            }}
+          >
             <h1>Eplore the weather all over the world</h1>
           </div>
           <div

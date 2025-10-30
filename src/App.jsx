@@ -5,7 +5,8 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Login } from "./components/login/Login";
 import { Home } from "./components/home/Home";
-import { FootballNews } from "./components/home/FootballNews.jsx";
+import { FootballNews } from "./components/football-news/FootballNews.jsx";
+import { Weather } from "./components/weather/Weather.jsx";
 function App() {
   const userInfo = useSelector((state) => state.userInfo);
   const [weather, setWeather] = useState(null);
@@ -41,6 +42,7 @@ function App() {
         <Routes>
           <Route index element={<Home weather={weather} news={news} />} />
           <Route path="/football-news" element={<FootballNews news={news} />} />
+          <Route path="/weather" element={<Weather />} />
         </Routes>
       )}
     </>
