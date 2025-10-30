@@ -6,6 +6,8 @@ export default function UserInfoReducer(state = initialValue, action) {
     const temp = { ...state, ...action.payload };
     localStorage.setItem("userInfo", JSON.stringify(temp));
     return temp;
+  } else if (action.type === "RESET") {
+    return { darkMode: state.darkMode };
   } else {
     return state;
   }

@@ -10,3 +10,8 @@ export function makeDark(val) {
     payload: val,
   };
 }
+export function reset() {
+  return {
+    type: "RESET",
+  };
+}
