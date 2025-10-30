@@ -1,0 +1,27 @@
+.slider-Container {
+  width: 60px;
+  height: 30px;
+  border-radius: 20px;
+  background-color: lightgray;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  transition: background-color 0.1s linear;
+  margin: 10px;
+}
+.slider-Container.change-color {
+  background-color: rgb(15, 25, 56);
+}
+.slider-Container.change-color .slide {
+  left: calc(100% - 29px);
+}
+.slide {
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 14px);
+  transition: left 0.3s linear 0.1s;
+}

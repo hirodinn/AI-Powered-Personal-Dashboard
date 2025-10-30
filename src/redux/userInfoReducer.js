@@ -1,6 +1,8 @@
-const initialValue = JSON.parse(localStorage.getItem("userInfo")) || {};
+const initialValue = JSON.parse(localStorage.getItem("userInfo")) || {
+  darkMode: false,
+};
 export default function UserInfoReducer(state = initialValue, action) {
-  if (action.type === "ADD") {
+  if (action.type === "ADD" || action.type === "THEME") {
     const temp = { ...state, ...action.payload };
     localStorage.setItem("userInfo", JSON.stringify(temp));
     return temp;

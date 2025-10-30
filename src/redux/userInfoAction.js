@@ -4,3 +4,9 @@ export function add(obj) {
     payload: obj,
   };
 }
+export function makeDark(val) {
+  return {
+    type: "THEME",
+    payload: val,
+  };
+}

@@ -17,7 +17,8 @@
   padding: 0 4vw;
   margin: 15px 0;
 }
-.home-container header button {
+.home-container header .button {
+  position: static;
   padding: 10px 22px;
   font-size: 20px;
   cursor: pointer;

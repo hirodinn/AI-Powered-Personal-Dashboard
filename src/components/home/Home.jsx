@@ -1,6 +1,7 @@
 import "./Home.css";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../../Button";
 export function Home({ weather, news }) {
   const navigate = useNavigate();
   const userInfo = useSelector((state) => state.userInfo);
@@ -12,7 +13,7 @@ export function Home({ weather, news }) {
       <main className="home-main">
         <header>
           <h1>Good Morning, {userInfo.name}</h1>
-          <button>Click</button>
+          <Button />
         </header>
         <div className="grid-container">
           <div className="clock">

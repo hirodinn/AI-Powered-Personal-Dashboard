@@ -118,10 +118,10 @@ function App() {
 
   return (
     <>
-      {Object.entries(userInfo).length < 3 ? (
+      {Object.entries(userInfo).length < 4 ? (
         <Login />
       ) : (
-        <div className="root">
+        <div className={userInfo.darkMode ? "root dark-mode" : "root"}>
           <Routes>
             <Route index element={<Home weather={weather} news={news} />} />
             <Route
