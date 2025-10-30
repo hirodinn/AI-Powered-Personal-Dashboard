@@ -20,5 +20,5 @@
   margin-right: 7px;
 }
 .each-history:hover {
-  background-color: var(--box-hover);
+  background-color: var(--secondary-background);
 }

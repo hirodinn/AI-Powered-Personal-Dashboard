@@ -16,6 +16,8 @@
   --secondary-background-bold: #f0c2f7;
   --primary-font-color: #03070a;
   --primary-hover-color: #03070a41;
+  --primary-heading-color: #09141d;
+  --primary-white-color: rgb(245, 252, 253);
   background: linear-gradient(
     45deg,
     var(--primary-background) 55%,
@@ -27,7 +29,7 @@
 .root.dark-mode {
   background: linear-gradient(45deg, #03070a 50%, #1c232f);
 }
-.total-container {
+.gemini-total-container {
   display: flex;
   width: 100vw;
   height: 100vh;

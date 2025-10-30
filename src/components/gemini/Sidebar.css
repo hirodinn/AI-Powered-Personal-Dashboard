@@ -1,14 +1,13 @@
 .side-bar {
   width: 80px;
   height: 100%;
-  background-color: var(--primary-color);
   display: flex;
   flex-direction: column;
   transition: all 0.3s;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  color: var(--text-color);
+  color: var(--primary-font-color);
 }
 .side-bar.expand-side-bar {
   width: 180px;

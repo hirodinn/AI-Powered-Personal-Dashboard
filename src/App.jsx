@@ -113,7 +113,8 @@ function App() {
   const [show, setShow] = useState(true);
   const [data, setData] = useState([]);
   const [historyData, setHistoryData] = useState([]);
-  const [isDark, setIsDark] = useState(false);
+
+  //GEMINI END
 
   return (
     <>
@@ -131,11 +132,7 @@ function App() {
             <Route
               path="/gemini"
               element={
-                <div
-                  className={
-                    isDark ? "total-container dark" : "total-container"
-                  }
-                >
+                <div className="gemini-total-container">
                   <Sidebar
                     show={show}
                     setShow={setShow}
@@ -143,13 +140,7 @@ function App() {
                     sendMessage={sendMessage}
                     reset={reset}
                   />
-                  <MainPage
-                    show={show}
-                    sendMessage={sendMessage}
-                    data={data}
-                    setIsDark={setIsDark}
-                    isDark={isDark}
-                  />
+                  <MainPage show={show} sendMessage={sendMessage} data={data} />
                 </div>
               }
             />

@@ -32,7 +32,7 @@ export function Weather() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <div className="weather-container">
+    <div className="weather-component-container">
       <div className="container">
         {weatherDetails &&
           (isLoading ? (

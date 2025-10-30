@@ -9,7 +9,7 @@ export function Home({ weather, news }) {
 
   return (
     <div className="home-container">
-      <main>
+      <main className="home-main">
         <header>
           <h1>Good Morning, {userInfo.name}</h1>
           <button>Click</button>

@@ -3,21 +3,21 @@
   overflow: hidden;
   color: var(--primary-font-color);
 }
-main {
+.home-container {
   width: 95%;
   margin: auto;
   height: 100vh;
   max-width: 1000px;
 }
 
-main header {
+.home-container header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 4vw;
   margin: 15px 0;
 }
-main header button {
+.home-container header button {
   padding: 10px 22px;
   font-size: 20px;
   cursor: pointer;
@@ -29,7 +29,7 @@ main header button {
     var(--secondary-background-bold)
   );
 }
-main .grid-container {
+.home-container .grid-container {
   display: grid;
   grid-template-areas:
     "clock clock clock todo"
@@ -38,9 +38,10 @@ main .grid-container {
     "chat chat chat chat";
   gap: 15px;
   grid-auto-rows: 165px;
-  grid-auto-columns: 24%;
+  grid-auto-columns: 23%;
+  padding: 10px;
 }
-main .grid-container > div {
+.home-container .grid-container > div {
   border-radius: 20px;
   background: linear-gradient(
     45deg,
@@ -49,17 +50,17 @@ main .grid-container > div {
   );
   transition: all 0.3s;
 }
-main .grid-container > div:hover {
+.home-container .grid-container > div:hover {
   box-shadow: 0 0 10px 3px var(--primary-hover-color);
 }
-main .grid-container .clock {
+.home-container .grid-container .clock {
   grid-area: clock;
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
 }
-main .grid-container .clock .weather-container {
+.home-container .grid-container .clock .weather-container {
   text-align: center;
   background: linear-gradient(
     45deg,
@@ -71,29 +72,29 @@ main .grid-container .clock .weather-container {
   padding: 0 20px;
   cursor: pointer;
 }
-main .grid-container .clock .weather-container:hover {
+.home-container .grid-container .clock .weather-container:hover {
   background-color: #314052;
 }
-main .grid-container .clock .weather-container > div {
+.home-container .grid-container .clock .weather-container > div {
   display: flex;
   align-items: center;
   font-size: 29px;
   margin-top: -10px;
 }
-main .grid-container .weather {
+.home-container .grid-container .weather {
   grid-area: weather;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 15px;
 }
-main .grid-container .news {
+.home-container .grid-container .news {
   grid-area: news;
   display: flex;
   flex-direction: column;
   padding: 15px;
 }
-main .grid-container .news .article-container {
+.home-container .grid-container .news .article-container {
   width: 100%;
   flex: 1;
   display: grid;
@@ -102,7 +103,7 @@ main .grid-container .news .article-container {
   gap: 10px;
   font-size: 13px;
 }
-main .grid-container .news .article-container article {
+.home-container .grid-container .news .article-container article {
   padding: 10px;
   height: fit-content;
   border-radius: 20px;
@@ -114,16 +115,16 @@ main .grid-container .news .article-container article {
   );
   cursor: pointer;
 }
-main .grid-container .news .article-container article:hover {
+.home-container .grid-container .news .article-container article:hover {
   background-color: #314052;
 }
-main .grid-container .todo {
+.home-container .grid-container .todo {
   grid-area: todo;
   height: 100%;
   display: flex;
   padding: 15px;
 }
-main .grid-container .todo-list-container {
+.home-container .grid-container .todo-list-container {
   height: 100%;
   width: 100%;
   display: flex;
@@ -131,41 +132,41 @@ main .grid-container .todo-list-container {
   overflow-y: scroll;
   scrollbar-width: none;
 }
-main .grid-container .todo-list-container .to-do {
+.home-container .grid-container .todo-list-container .to-do {
   width: 100%;
   max-height: 30px;
   border-bottom: 2px solid gray;
 }
-main .grid-container .chat {
+.home-container .grid-container .chat {
   grid-area: chat;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 }
-main .grid-container .chat img {
+.home-container .grid-container .chat img {
   width: max(3vw, 50px);
   border-radius: 50%;
   position: absolute;
   animation: rotate 1s linear infinite;
 }
-main .grid-container .chat .left-chat {
+.home-container .grid-container .chat .left-chat {
   bottom: 15px;
   left: 15px;
 }
-main .grid-container .chat .right-chat {
+.home-container .grid-container .chat .right-chat {
   top: 15px;
   right: 15px;
 }
 @media (max-width: 825px) {
-  main .grid-container .news .article-container .description {
+  .home-container .grid-container .news .article-container .description {
     display: none;
   }
-  main .grid-container .news .article-container {
+  .home-container .grid-container .news .article-container {
     display: flex;
     flex-wrap: wrap;
   }
-  main .grid-container .news .article-container article {
+  .home-container .grid-container .news .article-container article {
     width: 48%;
   }
 }

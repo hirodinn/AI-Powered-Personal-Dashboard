@@ -4,7 +4,11 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: var(--main-primary);
+  background: linear-gradient(
+    45deg,
+    var(--primary-background-bold) 70%,
+    var(--secondary-background-bold)
+  );
 }
 .gemini-main header {
   display: flex;
@@ -15,7 +19,7 @@
   padding-right: 40px;
   padding-top: 10px;
   margin-bottom: 50px;
-  color: var(--text-color);
+  color: var(--primary-font-color);
   font-size: 24px;
   font-weight: bold;
 }
@@ -40,7 +44,11 @@
   display: flex;
   align-items: center;
   height: 60px;
-  background: var(--primary-color);
+  background: linear-gradient(
+    45deg,
+    var(--primary-background) 70%,
+    var(--secondary-background)
+  );
   padding-right: 20px;
   border-radius: 50px;
 }
@@ -60,7 +68,7 @@
   outline: none;
   padding-left: 20px;
   background: transparent;
-  color: var(--text-color);
+  color: var(--primary-font-color);
 }
 .gemini-main footer input::placeholder {
   color: gray;
@@ -70,7 +78,7 @@
 }
 .gemini-main footer .footer-bottom {
   font-size: 13px;
-  color: var(--text-color);
+  color: var(--primary-font-color);
 }
 .hidden {
   display: none;
