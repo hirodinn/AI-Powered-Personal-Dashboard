@@ -3,7 +3,6 @@ import "./Home.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 export function Home() {
-  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const userInfo = useSelector((state) => state.userInfo);
   const [weather, setWeather] = useState(null);
   const [news, setNews] = useState([]);
@@ -12,12 +11,16 @@ export function Home() {
   useEffect(() => {
     async function loadData() {
       try {
+        // let response = await axios.get(
+        //   `https://api.openweathermap.org/data/2.5/weather?q=${
+        //     userInfo.city
+        //   }&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`
+        // );
+        // setWeather(response.data);
         let response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${userInfo.city}&appid=${apiKey}&units=metric`
-        );
-        setWeather(response.data);
-        response = response = await axios.get(
-          "https://newsapi.org/v2/everything?q=Manchester%united&language=en&apiKey=80c723679fc648faacb6c5ec05c50476"
+          `https://newsapi.org/v2/everything?q=Manchester%united&language=en&apiKey=${
+            import.meta.env.VITE_FOOTBALL_NEWS_API_KEY
+          }`
         );
         setNews(response.data.articles.slice(0, 3));
         console.log(response.data.article.slice(0, 3));
