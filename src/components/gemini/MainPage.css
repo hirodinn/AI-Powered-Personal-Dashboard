@@ -1,4 +1,4 @@
-main {
+.gemini-main {
   flex: 1;
   transition: all 0.3s;
   height: 100%;
@@ -6,7 +6,7 @@ main {
   flex-direction: column;
   background-color: var(--main-primary);
 }
-main header {
+.gemini-main header {
   display: flex;
   justify-content: space-between;
   height: 60px;
@@ -19,7 +19,7 @@ main header {
   font-size: 24px;
   font-weight: bold;
 }
-main header img {
+.gemini-main header img {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -27,7 +27,7 @@ main header img {
   object-position: center;
 }
 
-main footer {
+.gemini-main footer {
   height: 90px;
   width: 90%;
   max-width: 860px;
@@ -36,7 +36,7 @@ main footer {
   margin-bottom: 7px;
   text-align: center;
 }
-main footer .footer-top {
+.gemini-main footer .footer-top {
   display: flex;
   align-items: center;
   height: 60px;
@@ -44,7 +44,7 @@ main footer .footer-top {
   padding-right: 20px;
   border-radius: 50px;
 }
-main footer img {
+.gemini-main footer img {
   width: 27px;
   height: 27px;
   object-fit: cover;
@@ -52,7 +52,7 @@ main footer img {
   margin-left: 10px;
   cursor: pointer;
 }
-main footer input {
+.gemini-main footer input {
   flex: 1;
   height: 100%;
   border: none;
@@ -62,13 +62,13 @@ main footer input {
   background: transparent;
   color: var(--text-color);
 }
-main footer input::placeholder {
+.gemini-main footer input::placeholder {
   color: gray;
 }
-main footer input:focus {
+.gemini-main footer input:focus {
   outline: none;
 }
-main footer .footer-bottom {
+.gemini-main footer .footer-bottom {
   font-size: 13px;
   color: var(--text-color);
 }

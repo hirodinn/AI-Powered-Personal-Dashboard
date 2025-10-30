@@ -36,7 +36,7 @@ export function MainPage({ data, sendMessage, setIsDark, isDark }) {
     setInputValue("");
   }
   return (
-    <main>
+    <main className="gemini-main">
       <header>
         <p>Gemini</p>
         <img src="logo.jpeg" />

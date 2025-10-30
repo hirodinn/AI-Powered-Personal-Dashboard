@@ -5,13 +5,18 @@
   overflow-y: scroll;
   scrollbar-width: none;
   margin: 0 auto;
-  color: white;
+  color: var(--primary-font-color);
   max-width: 800px;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.151);
   padding: 20px;
   padding-top: 50px;
   padding-right: 50px;
   position: relative;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background-bold) 70%,
+    var(--secondary-background-bold)
+  );
 }
 .football-news::after {
   content: "S c r o l l h e r e";

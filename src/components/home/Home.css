@@ -1,6 +1,7 @@
 .home-container {
   height: 100vh;
   overflow: hidden;
+  color: var(--primary-font-color);
 }
 main {
   width: 95%;
@@ -15,16 +16,18 @@ main header {
   align-items: center;
   padding: 0 4vw;
   margin: 15px 0;
-  color: white;
 }
 main header button {
   padding: 10px 22px;
   font-size: 20px;
   cursor: pointer;
   border-radius: 10px;
-  background-color: #500201;
-  color: white;
   border: none;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background-bold) 70%,
+    var(--secondary-background-bold)
+  );
 }
 main .grid-container {
   display: grid;
@@ -39,15 +42,18 @@ main .grid-container {
 }
 main .grid-container > div {
   border-radius: 20px;
-  color: white;
-  background: linear-gradient(45deg, #121a23 50%, #232b38);
+  background: linear-gradient(
+    45deg,
+    var(--primary-background-bold) 70%,
+    var(--secondary-background-bold)
+  );
+  transition: all 0.3s;
 }
 main .grid-container > div:hover {
-  box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.336);
+  box-shadow: 0 0 10px 3px var(--primary-hover-color);
 }
 main .grid-container .clock {
   grid-area: clock;
-  background-color: black;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -55,7 +61,11 @@ main .grid-container .clock {
 }
 main .grid-container .clock .weather-container {
   text-align: center;
-  background-color: #242f3c;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background) 70%,
+    var(--secondary-background)
+  );
   height: 80%;
   border-radius: 20px;
   padding: 0 20px;
@@ -97,7 +107,11 @@ main .grid-container .news .article-container article {
   height: fit-content;
   border-radius: 20px;
   padding-bottom: 15px;
-  background-color: #242f3c;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background) 70%,
+    var(--secondary-background)
+  );
   cursor: pointer;
 }
 main .grid-container .news .article-container article:hover {

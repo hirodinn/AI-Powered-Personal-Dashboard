@@ -8,25 +8,28 @@
 }
 #root {
   overflow: hidden;
-  background: linear-gradient(45deg, #03070a 50%, #1c232f);
+}
+.root {
+  --primary-background: #a7cae6;
+  --secondary-background: #f2ccf7;
+  --primary-background-bold: #aabece;
+  --secondary-background-bold: #f0c2f7;
+  --primary-font-color: #03070a;
+  --primary-hover-color: #03070a41;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background) 55%,
+    var(--secondary-background)
+  );
   width: 100vw;
   height: 100vh;
+}
+.root.dark-mode {
+  background: linear-gradient(45deg, #03070a 50%, #1c232f);
 }
 .total-container {
   display: flex;
   width: 100vw;
   height: 100vh;
   align-items: center;
-  --primary-color: #f0f4f9;
-  --main-primary: white;
-  --text-color: rgb(20, 20, 20);
-  --box-hover: #c3c7cc;
-  --chat-primary: #e6eaf1;
-}
-.total-container.dark {
-  --primary-color: rgb(44, 44, 44);
-  --main-primary: black;
-  --text-color: rgb(219, 219, 219);
-  --box-hover: #6a6c6e;
-  --chat-primary: #626468;
 }

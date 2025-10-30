@@ -120,34 +120,41 @@ function App() {
       {Object.entries(userInfo).length < 3 ? (
         <Login />
       ) : (
-        <Routes>
-          <Route index element={<Home weather={weather} news={news} />} />
-          <Route path="/football-news" element={<FootballNews news={news} />} />
-          <Route path="/weather" element={<Weather />} />
-          <Route
-            path="/gemini"
-            element={
-              <div
-                className={isDark ? "total-container dark" : "total-container"}
-              >
-                <Sidebar
-                  show={show}
-                  setShow={setShow}
-                  historyData={historyData}
-                  sendMessage={sendMessage}
-                  reset={reset}
-                />
-                <MainPage
-                  show={show}
-                  sendMessage={sendMessage}
-                  data={data}
-                  setIsDark={setIsDark}
-                  isDark={isDark}
-                />
-              </div>
-            }
-          />
-        </Routes>
+        <div className="root">
+          <Routes>
+            <Route index element={<Home weather={weather} news={news} />} />
+            <Route
+              path="/football-news"
+              element={<FootballNews news={news} />}
+            />
+            <Route path="/weather" element={<Weather />} />
+            <Route
+              path="/gemini"
+              element={
+                <div
+                  className={
+                    isDark ? "total-container dark" : "total-container"
+                  }
+                >
+                  <Sidebar
+                    show={show}
+                    setShow={setShow}
+                    historyData={historyData}
+                    sendMessage={sendMessage}
+                    reset={reset}
+                  />
+                  <MainPage
+                    show={show}
+                    sendMessage={sendMessage}
+                    data={data}
+                    setIsDark={setIsDark}
+                    isDark={isDark}
+                  />
+                </div>
+              }
+            />
+          </Routes>
+        </div>
       )}
     </>
   );
