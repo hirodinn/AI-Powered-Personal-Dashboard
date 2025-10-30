@@ -1,12 +1,37 @@
 import "./Home.css";
 import { useSelector } from "react-redux";
+import { useEffect } from "react";
+import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../Button";
-export function Home({ weather, news }) {
+export function Home({ weather, news, setNews, setWeather }) {
   const navigate = useNavigate();
   const userInfo = useSelector((state) => state.userInfo);
   const toDoList = JSON.parse(localStorage.getItem("toDoList")) || [];
   const date = new Date();
+
+  useEffect(() => {
+    async function loadData() {
+      try {
+        let response = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${
+            userInfo.city
+          }&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`
+        );
+        setWeather(response.data);
+        response = await axios.get(
+          `https://newsapi.org/v2/everything?q=${
+            userInfo.footballTeam
+          }&language=en&apiKey=${import.meta.env.VITE_FOOTBALL_NEWS_API_KEY}`
+        );
+        setNews(response.data.articles);
+      } catch (error) {
+        console.error("Error fetching weather:", error);
+      }
+    }
+    loadData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="home-container">

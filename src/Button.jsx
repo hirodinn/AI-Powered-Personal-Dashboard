@@ -12,7 +12,7 @@ export function Button() {
         console.log(darkMode);
       }}
     >
-      <div class="slide"></div>
+      <div className="slide"></div>
     </div>
   );
 }

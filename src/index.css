@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
-
+:root {
+  --primary-background: #a7cae6;
+  --secondary-background: #f2ccf7;
+  --primary-background-bold: #aabece;
+  --secondary-background-bold: #f0c2f7;
+  --primary-font-color: #03070a;
+  --primary-hover-color: #03070a41;
+  --primary-heading-color: #09141d;
+  --primary-white-color: rgb(245, 252, 253);
+}
 * {
   font-family: "Poppins", sans-serif;
   margin: 0;
@@ -10,14 +19,6 @@
   overflow: hidden;
 }
 .root {
-  --primary-background: #a7cae6;
-  --secondary-background: #f2ccf7;
-  --primary-background-bold: #aabece;
-  --secondary-background-bold: #f0c2f7;
-  --primary-font-color: #03070a;
-  --primary-hover-color: #03070a41;
-  --primary-heading-color: #09141d;
-  --primary-white-color: rgb(245, 252, 253);
   background: linear-gradient(
     45deg,
     var(--primary-background) 55%,

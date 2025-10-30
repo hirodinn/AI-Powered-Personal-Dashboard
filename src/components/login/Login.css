@@ -1,9 +1,14 @@
 .login-container {
   height: 100vh;
   display: flex;
-  background-color: rgb(204, 240, 252);
   width: fit-content;
   transition: transform 1s ease-in-out;
+  color: var(--primary-font-color);
+  background: linear-gradient(
+    45deg,
+    var(--primary-background) 55%,
+    var(--secondary-background)
+  );
 }
 .login-container .each-login-page {
   min-width: 100vw;
@@ -39,7 +44,6 @@
   padding: 3px;
   border: none;
   background-color: #500201;
-  color: white;
   box-shadow: 0 4px 2px #500201;
   cursor: pointer;
 }
