@@ -1,6 +1,7 @@
 import { useState } from "react";
 import EachLoginPage from "./EachLoginPage";
 import "./Login.css";
+import { useSelector } from "react-redux";
 export function Login() {
   const [current, setCurrent] = useState(0);
 
@@ -18,9 +19,10 @@ export function Login() {
       description: "Enter Your Favorite FootBall Team",
     },
   ];
+  const dark = useSelector((state) => state.userInfo.darkMode);
   return (
     <div
-      className="login-container"
+      className={`login-container ${dark && "dark"}`}
       style={{ transform: `translateX(-${100 * current}vw)` }}
     >
       {infos.map((info, i) => {

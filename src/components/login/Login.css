@@ -10,6 +10,9 @@
     var(--secondary-background)
   );
 }
+.login-container.dark {
+  background: linear-gradient(45deg, #071016 55%, #1c232f);
+}
 .login-container .each-login-page {
   min-width: 100vw;
   height: 100%;

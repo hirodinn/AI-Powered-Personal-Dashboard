@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../Button";
+import { ResetButton } from "../../ResetButton";
 export function Home({ weather, news, setNews, setWeather }) {
   const navigate = useNavigate();
   const userInfo = useSelector((state) => state.userInfo);
@@ -35,6 +36,7 @@ export function Home({ weather, news, setNews, setWeather }) {
 
   return (
     <div className="home-container">
+      <ResetButton />
       <main className="home-main">
         <header>
           <h1>Good Morning, {userInfo.name}</h1>
