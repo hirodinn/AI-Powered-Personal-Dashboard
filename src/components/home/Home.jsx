@@ -1,6 +1,8 @@
 import "./Home.css";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 export function Home({ weather, news }) {
+  const navigate = useNavigate();
   const userInfo = useSelector((state) => state.userInfo);
   const toDoList = JSON.parse(localStorage.getItem("toDoList")) || [];
   const date = new Date();
@@ -60,7 +62,12 @@ export function Home({ weather, news }) {
           <div className="weather">
             <h1>Eplore the weather all over the world</h1>
           </div>
-          <div className="news">
+          <div
+            className="news"
+            onClick={() => {
+              navigate("/football-news");
+            }}
+          >
             <h1>Football News</h1>
             <div className="article-container">
               {news &&

@@ -5,7 +5,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Login } from "./components/login/Login";
 import { Home } from "./components/home/Home";
-import { FootballNews } from "./components/home/FootballNews";
+import { FootballNews } from "./components/home/FootballNews.jsx";
 function App() {
   const userInfo = useSelector((state) => state.userInfo);
   const [weather, setWeather] = useState(null);

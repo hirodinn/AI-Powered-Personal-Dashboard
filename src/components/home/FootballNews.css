@@ -1,11 +1,35 @@
 .football-news {
   height: 100vh;
-  width: 300px;
+  width: 90%;
   overflow: hidden;
   overflow-y: scroll;
   scrollbar-width: none;
-  margin-left: auto;
+  margin: 0 auto;
   color: white;
+  max-width: 800px;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.151);
+  padding: 20px;
+  padding-top: 50px;
+  padding-right: 50px;
+  position: relative;
+}
+.football-news::after {
+  content: "S c r o l l h e r e";
+  position: absolute;
+  right: 25px;
+  top: 20px;
+  width: 2px;
+  font-size: 20px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  white-space: wrap;
+}
+.football-news h1 {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 .football-news article {
   width: 100%;
@@ -14,16 +38,21 @@
   display: flex;
   flex-direction: column;
   padding: 15px;
+  overflow: hidden;
+  cursor: pointer;
 }
 .football-news article:hover img {
   display: block;
+  max-height: 1000px;
 }
 .football-news article:hover .description {
   display: block;
 }
 .football-news article img {
   width: 100%;
-  display: none;
+  max-height: 0;
+  transition: all 0.3s ease-in-out;
+  position: relative;
 }
 .football-news article .description {
   display: none;
