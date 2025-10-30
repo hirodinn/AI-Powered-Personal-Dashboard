@@ -1,38 +1,11 @@
-import axios from "axios";
 import "./Home.css";
-import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-export function Home() {
+export function Home({ weather, news }) {
   const userInfo = useSelector((state) => state.userInfo);
-  const [weather, setWeather] = useState(null);
-  const [news, setNews] = useState([]);
   const toDoList = JSON.parse(localStorage.getItem("toDoList")) || [];
   const date = new Date();
 
-  useEffect(() => {
-    async function loadData() {
-      try {
-        let response = await axios.get(
-          `https://api.openweathermap.org/data/2.5/weather?q=${
-            userInfo.city
-          }&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`
-        );
-        setWeather(response.data);
-        response = await axios.get(
-          `https://newsapi.org/v2/everything?q=Manchester%united&language=en&apiKey=${
-            import.meta.env.VITE_FOOTBALL_NEWS_API_KEY
-          }`
-        );
-        setNews(response.data.articles.slice(0, 3));
-        console.log(response.data.article.slice(0, 3));
-      } catch (error) {
-        console.error("Error fetching weather:", error);
-      }
-    }
-    loadData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
+  console.log(weather, news);
   return (
     <div className="home-container">
       <main>
@@ -91,7 +64,7 @@ export function Home() {
             <h1>Football News</h1>
             <div className="article-container">
               {news &&
-                news.map((n, i) => {
+                news.slice(0, 3).map((n, i) => {
                   return (
                     <article key={i}>
                       <img src={n.urlToImage} style={{ width: "100%" }} />
