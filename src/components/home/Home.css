@@ -119,8 +119,25 @@ main .grid-container .todo-list-container .to-do {
 }
 main .grid-container .chat {
   grid-area: chat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
-
+main .grid-container .chat img {
+  width: max(3vw, 50px);
+  border-radius: 50%;
+  position: absolute;
+  animation: rotate 1s linear infinite;
+}
+main .grid-container .chat .left-chat {
+  bottom: 15px;
+  left: 15px;
+}
+main .grid-container .chat .right-chat {
+  top: 15px;
+  right: 15px;
+}
 @media (max-width: 825px) {
   main .grid-container .news .article-container .description {
     display: none;
@@ -131,5 +148,14 @@ main .grid-container .chat {
   }
   main .grid-container .news .article-container article {
     width: 48%;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

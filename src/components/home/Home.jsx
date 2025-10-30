@@ -114,10 +114,16 @@ export function Home() {
                 })}
               </div>
             ) : (
-              <h1 style={{ alignSelf: "center" }}>You Have no To Do list</h1>
+              <h1 style={{ alignSelf: "center" }}>
+                Seems Like You are free Today
+              </h1>
             )}
           </div>
-          <div className="chat"></div>
+          <div className="chat">
+            <h1>Come Chat With Me</h1>
+            <img src="chat/chat.svg" className="left-chat" />
+            <img src="chat/chat.svg" className="right-chat" />
+          </div>
         </div>
       </main>
     </div>
