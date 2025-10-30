@@ -7,7 +7,6 @@ export function Home({ weather, news }) {
   const toDoList = JSON.parse(localStorage.getItem("toDoList")) || [];
   const date = new Date();
 
-  console.log(weather, news);
   return (
     <div className="home-container">
       <main>
@@ -69,9 +68,9 @@ export function Home({ weather, news }) {
             }}
           >
             <h1>Football News</h1>
-            <div className="article-container">
-              {news &&
-                news.slice(0, 3).map((n, i) => {
+            {news.length > 0 ? (
+              <div className="article-container">
+                {news.slice(0, 3).map((n, i) => {
                   return (
                     <article key={i}>
                       <img src={n.urlToImage} style={{ width: "100%" }} />
@@ -83,7 +82,12 @@ export function Home({ weather, news }) {
                     </article>
                   );
                 })}
-            </div>
+              </div>
+            ) : (
+              <div className="loading">
+                <div className="spinner"></div>
+              </div>
+            )}
           </div>
           <div className="todo">
             {toDoList.length > 0 ? (

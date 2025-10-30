@@ -21,12 +21,11 @@ function App() {
         );
         setWeather(response.data);
         response = await axios.get(
-          `https://newsapi.org/v2/everything?q=Manchester%20united&language=en&apiKey=${
-            import.meta.env.VITE_FOOTBALL_NEWS_API_KEY
-          }`
+          `https://newsapi.org/v2/everything?q=${
+            userInfo.footballTeam
+          }&language=en&apiKey=${import.meta.env.VITE_FOOTBALL_NEWS_API_KEY}`
         );
         setNews(response.data.articles);
-        console.log(response.data.articles.slice(0, 3));
       } catch (error) {
         console.error("Error fetching weather:", error);
       }
