@@ -6,18 +6,19 @@ export function Home() {
   const userInfo = useSelector((state) => state.userInfo);
   const [weather, setWeather] = useState(null);
   const [news, setNews] = useState([]);
+  const toDoList = JSON.parse(localStorage.getItem("toDoList")) || [];
   const date = new Date();
 
   useEffect(() => {
     async function loadData() {
       try {
-        // let response = await axios.get(
-        //   `https://api.openweathermap.org/data/2.5/weather?q=${
-        //     userInfo.city
-        //   }&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`
-        // );
-        // setWeather(response.data);
         let response = await axios.get(
+          `https://api.openweathermap.org/data/2.5/weather?q=${
+            userInfo.city
+          }&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`
+        );
+        setWeather(response.data);
+        response = await axios.get(
           `https://newsapi.org/v2/everything?q=Manchester%united&language=en&apiKey=${
             import.meta.env.VITE_FOOTBALL_NEWS_API_KEY
           }`
@@ -101,7 +102,21 @@ export function Home() {
                 })}
             </div>
           </div>
-          <div className="todo"></div>
+          <div className="todo">
+            {toDoList.length > 0 ? (
+              <div className="todo-list-container">
+                {toDoList.map((toDo, i) => {
+                  return (
+                    <div className="to-do" key={i}>
+                      {toDo.title}
+                    </div>
+                  );
+                })}
+              </div>
+            ) : (
+              <h1 style={{ alignSelf: "center" }}>You Have no To Do list</h1>
+            )}
+          </div>
           <div className="chat"></div>
         </div>
       </main>
