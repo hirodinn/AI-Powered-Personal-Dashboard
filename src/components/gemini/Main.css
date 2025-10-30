@@ -1,0 +1,15 @@
+.main-container {
+  flex: 1;
+  width: 90%;
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  scrollbar-width: none;
+}
+@media (max-width: 1000px) {
+  .main-container {
+    width: 96%;
+  }
+}

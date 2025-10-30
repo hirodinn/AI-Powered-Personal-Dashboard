@@ -1,0 +1,98 @@
+.message {
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px 0;
+  margin-left: 0;
+  margin-right: auto;
+  max-width: 530px;
+  color: var(--text-color);
+}
+.message.right {
+  margin-left: auto;
+  margin-right: 0;
+}
+.message img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.message p {
+  margin: 0 10px !important;
+  margin-top: 7px;
+  text-align: justify;
+  color: var(--text-color);
+}
+
+.message-text span {
+  position: relative;
+  display: block;
+  background-color: #4a4a4a;
+  color: transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 14px;
+  margin-bottom: 8px;
+}
+
+/* vary widths for realism */
+.message-text span:nth-child(1) {
+  width: 300px;
+}
+.message-text span:nth-child(2) {
+  width: 260px;
+}
+.message-text span:nth-child(3) {
+  width: 180px;
+}
+
+.message-text span div {
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 20%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.6),
+    transparent
+  );
+  animation: loadingAnimation 1.2s linear infinite;
+}
+
+@keyframes loadingAnimation {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(500px);
+  }
+}
+
+.message-text h1,
+.message-text h2,
+.message-text h3 {
+  font-weight: bold;
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
+.message-text p {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.message-text ul {
+  margin-left: 16px;
+}
+
+.message-text img {
+  width: 200px;
+  border-radius: 8px;
+  margin: 8px 0;
+}

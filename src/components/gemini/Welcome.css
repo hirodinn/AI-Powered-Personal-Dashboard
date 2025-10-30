@@ -1,0 +1,57 @@
+.welcome-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.welcome-container h1 {
+  font-size: max(3.5vw, 30px);
+  color: #c4c7c5;
+}
+.welcome-container h1:first-child {
+  margin-top: 30px;
+  width: fit-content;
+  background: linear-gradient(16deg, #4b90ff, #ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.welcome-container .box-container {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+.welcome-container .box-container .box {
+  width: min(17vw, 170px);
+  height: 200px;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px;
+  position: relative;
+  border-radius: 10px;
+  margin: auto;
+  cursor: pointer;
+  font-size: 18px;
+}
+.welcome-container .box-container .box:hover {
+  background-color: var(--box-hover);
+}
+.welcome-container .box-container .box img {
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  background-color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+@media (max-width: 900px) {
+  .welcome-container .box-container .box {
+    font-size: 13px;
+  }
+}

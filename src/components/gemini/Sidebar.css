@@ -1,0 +1,120 @@
+.side-bar {
+  width: 80px;
+  height: 100%;
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  color: var(--text-color);
+}
+.side-bar.expand-side-bar {
+  width: 180px;
+}
+.side-bar p {
+  display: none;
+  margin-left: 5px;
+}
+.side-bar.expand-side-bar p {
+  display: block;
+  font-size: 15px !important;
+}
+
+.side-bar > div {
+  width: 100%;
+}
+.side-bar img {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  object-position: center;
+}
+.side-bar .humburger-icon {
+  margin: 20px;
+  cursor: pointer;
+}
+
+.side-bar .top-side-bar .new-chat {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 14px;
+  height: 50px;
+  background-color: var(--chat-primary);
+  color: var(--text-color);
+  font-size: 35px;
+  border-radius: 40px;
+  margin-left: 16px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.side-bar .top-side-bar .new-chat img {
+  width: 20px;
+  height: 20px;
+}
+
+.side-bar .top-side-bar .recent-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.side-bar .top-side-bar .recent-chat p {
+  font-weight: bold;
+  margin: 10px;
+  letter-spacing: 1px;
+}
+
+.side-bar .top-side-bar {
+  height: calc(100% - 160px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.side-bar .bottom-side-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.side-bar.expand-side-bar .bottom-side-bar {
+  display: block;
+  padding-left: 30px;
+}
+.side-bar .bottom-side-bar .bottom-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 100%;
+  justify-content: space-evenly;
+}
+.side-bar .bottom-side-bar div {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.side-bar .bottom-side-bar div p {
+  margin-left: 6px;
+}
+
+@media (max-width: 700px) {
+  .side-bar.expand-side-bar {
+    width: 130px;
+  }
+  .side-bar .top-side-bar .new-chat {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .side-bar.expand-side-bar .bottom-side-bar {
+    display: block;
+    padding-left: 15px;
+  }
+}

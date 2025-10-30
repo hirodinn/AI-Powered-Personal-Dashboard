@@ -12,3 +12,21 @@
   width: 100vw;
   height: 100vh;
 }
+.total-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  --primary-color: #f0f4f9;
+  --main-primary: white;
+  --text-color: rgb(20, 20, 20);
+  --box-hover: #c3c7cc;
+  --chat-primary: #e6eaf1;
+}
+.total-container.dark {
+  --primary-color: rgb(44, 44, 44);
+  --main-primary: black;
+  --text-color: rgb(219, 219, 219);
+  --box-hover: #6a6c6e;
+  --chat-primary: #626468;
+}

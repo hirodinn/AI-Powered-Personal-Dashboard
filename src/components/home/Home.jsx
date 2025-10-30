@@ -111,7 +111,12 @@ export function Home({ weather, news }) {
               </h1>
             )}
           </div>
-          <div className="chat">
+          <div
+            className="chat"
+            onClick={() => {
+              navigate("gemini");
+            }}
+          >
             <h1>Come Chat With Me</h1>
             <img src="chat/chat.svg" className="left-chat" />
             <img src="chat/chat.svg" className="right-chat" />
