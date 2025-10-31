@@ -19,7 +19,6 @@ export function EachTodo({ todo, each }) {
       }}
     >
       <p className="title">{each.title}</p>
-      <p className="description">{each.description}</p>
     </div>
   );
 }

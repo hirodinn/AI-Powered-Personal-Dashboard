@@ -8,7 +8,7 @@ import { ResetButton } from "../../ResetButton";
 export function Home({ weather, news, setNews, setWeather }) {
   const navigate = useNavigate();
   const userInfo = useSelector((state) => state.userInfo);
-  const toDoList = useSelector((state) => state.userInfo.todo);
+  const toDoList = JSON.parse(localStorage.getItem("todo"));
   console.log(toDoList);
   const date = new Date();
 
