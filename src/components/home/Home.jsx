@@ -8,10 +8,9 @@ import { ResetButton } from "../../ResetButton";
 export function Home({ weather, news, setNews, setWeather }) {
   const navigate = useNavigate();
   const userInfo = useSelector((state) => state.userInfo);
-  const toDoList = JSON.parse(localStorage.getItem("todo"));
+  const toDoList = JSON.parse(localStorage.getItem("todo")) || [];
   console.log(toDoList);
   const date = new Date();
-
   useEffect(() => {
     async function loadData() {
       try {
@@ -129,6 +128,7 @@ export function Home({ weather, news, setNews, setWeather }) {
               navigate("todo");
             }}
           >
+            <h3>Things To Do</h3>
             {toDoList.length > 0 ? (
               <div className="todo-list-container">
                 {toDoList.map((toDo, i) => {
@@ -140,9 +140,14 @@ export function Home({ weather, news, setNews, setWeather }) {
                 })}
               </div>
             ) : (
-              <h1 style={{ alignSelf: "center" }}>
+              <h3
+                style={{
+                  alignSelf: "center",
+                  margin: "auto",
+                }}
+              >
                 Seems Like You are free Today
-              </h1>
+              </h3>
             )}
           </div>
           <div
