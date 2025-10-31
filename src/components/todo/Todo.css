@@ -60,6 +60,7 @@
   width: 100%;
   padding: 10px;
   border-bottom: 2px solid gray;
+  cursor: pointer;
 }
 .spoil {
   text-decoration: line-through !important;

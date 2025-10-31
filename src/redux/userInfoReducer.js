@@ -1,6 +1,6 @@
 const initialValue = JSON.parse(localStorage.getItem("userInfo")) || {
   darkMode: false,
-  todo: JSON.parse(localStorage.getItem("todo-list")) || [],
+  todo: JSON.parse(localStorage.getItem("todo")) || [],
 };
 export default function UserInfoReducer(state = initialValue, action) {
   if (action.type === "ADD" || action.type === "THEME") {
@@ -10,7 +10,7 @@ export default function UserInfoReducer(state = initialValue, action) {
   } else if (action.type === "RESET") {
     return { darkMode: state.darkMode };
   } else if (action.type === "SETTODO") {
-    localStorage.setItem("todo-list", JSON.stringify(state.todo));
+    localStorage.setItem("todo", JSON.stringify(state.todo));
     return { ...state, ...action.payload };
   } else {
     return state;

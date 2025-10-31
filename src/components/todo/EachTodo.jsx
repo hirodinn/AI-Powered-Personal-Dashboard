@@ -10,7 +10,7 @@ export function EachTodo({ todo, each }) {
         if (!spoil) {
           localStorage.setItem(
             "todo",
-            JSON.stringify(todo.filter((t) => t !== each))
+            JSON.stringify(todo.filter((t) => t.id !== each.id))
           );
           console.log("this is excuted");
         } else {
