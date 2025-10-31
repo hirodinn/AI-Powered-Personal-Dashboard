@@ -10,6 +10,7 @@ import { Sidebar } from "./components/gemini/Sidebar";
 import { MainPage } from "./components/gemini/MainPage";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./App.css";
+import { Todo } from "./components/todo/Todo.jsx";
 const genAI = new GoogleGenerativeAI(import.meta.env.VITE_GEMINI_API_KEY);
 function App() {
   const userInfo = useSelector((state) => state.userInfo);
@@ -130,6 +131,7 @@ function App() {
                 </div>
               }
             />
+            <Route path="todo" element={<Todo />} />
           </Routes>
         </div>
       )}

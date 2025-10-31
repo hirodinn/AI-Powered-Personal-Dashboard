@@ -122,7 +122,12 @@ export function Home({ weather, news, setNews, setWeather }) {
               </div>
             )}
           </div>
-          <div className="todo">
+          <div
+            className="todo"
+            onClick={() => {
+              navigate("todo");
+            }}
+          >
             {toDoList.length > 0 ? (
               <div className="todo-list-container">
                 {toDoList.map((toDo, i) => {
