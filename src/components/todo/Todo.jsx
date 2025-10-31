@@ -1,7 +1,7 @@
 import "./Todo.css";
 import { EachTodo } from "./EachTodo";
 export function Todo() {
-  const todo = JSON.parse(localStorage.getItem("todo-List")) || [];
+  const todo = JSON.parse(localStorage.getItem("todo")) || [];
   return (
     <div className="todo-container">
       <form>

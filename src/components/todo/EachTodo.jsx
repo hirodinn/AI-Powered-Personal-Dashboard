@@ -7,13 +7,13 @@ export function EachTodo({ todo, each }) {
       className={spoil ? "spoil" : ""}
       onClick={() => {
         setSpoil(!spoil);
-        if (spoil)
+        if (!spoil) {
           localStorage.setItem(
-            "todo-list",
-            todo.filter((t) => t !== each)
+            "todo",
+            JSON.stringify(todo.filter((t) => t !== each))
           );
-        else {
-          todo.push(each);
+          console.log("this is excuted");
+        } else {
           localStorage.setItem("todo", JSON.stringify(todo));
         }
       }}

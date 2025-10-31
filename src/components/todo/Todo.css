@@ -11,6 +11,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: var(--primary-font-color);
 }
 .todo-container form {
   display: flex;
@@ -59,4 +60,11 @@
   width: 100%;
   padding: 10px;
   border-bottom: 2px solid gray;
+}
+.spoil {
+  text-decoration: line-through !important;
+  color: rgb(88, 88, 88);
+}
+.todo-container p {
+  text-decoration: inherit;
 }
