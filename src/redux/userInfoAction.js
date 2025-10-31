@@ -15,3 +15,9 @@ export function reset() {
     type: "RESET",
   };
 }
+export function setTodo(obj) {
+  return {
+    type: "SETTODO",
+    payload: obj,
+  };
+}
