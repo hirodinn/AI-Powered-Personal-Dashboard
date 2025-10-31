@@ -12,6 +12,7 @@
   flex-direction: column;
   align-items: center;
   color: var(--primary-font-color);
+  padding: 25px 15px;
 }
 .todo-container form {
   display: flex;
@@ -21,6 +22,7 @@
   background: transparent;
   color: var(--primary-font-color);
   height: 20%;
+  margin-bottom: 20px;
 }
 .todo-container input {
   width: 80%;

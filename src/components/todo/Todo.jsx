@@ -1,6 +1,7 @@
 import "./Todo.css";
 import { EachTodo } from "./EachTodo";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { current } from "@reduxjs/toolkit";
 export function Todo() {
   const [todo, setTodo] = useState(
     JSON.parse(localStorage.getItem("todo")) || []
@@ -9,6 +10,7 @@ export function Todo() {
   const [todoRedux, setTodoRedux] = useState(
     JSON.parse(localStorage.getItem("todo")) || []
   );
+  const containerRef = useRef(null);
   function addEntry(e) {
     e.preventDefault();
     const temp = [...todoRedux, { id: crypto.randomUUID(), title: inputValue }];
@@ -17,6 +19,10 @@ export function Todo() {
     setInputValue("");
     localStorage.setItem("todo", JSON.stringify(temp));
   }
+  useEffect(() => {
+    const containerElem = containerRef.current;
+    if (current) containerElem.scrollTop = containerElem.scrollHeight;
+  }, [todoRedux]);
   return (
     <div className="todo-container">
       <form onSubmit={addEntry}>
@@ -30,7 +36,7 @@ export function Todo() {
         />
         <button>Submit</button>
       </form>
-      <div className="todo-lists">
+      <div className="todo-lists" ref={containerRef}>
         {todoRedux.map((each, i) => {
           return <EachTodo todo={todo} each={each} key={i} />;
         })}

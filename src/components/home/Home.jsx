@@ -1,6 +1,6 @@
 import "./Home.css";
 import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../../Button";
@@ -9,6 +9,7 @@ export function Home({ weather, news, setNews, setWeather }) {
   const navigate = useNavigate();
   const userInfo = useSelector((state) => state.userInfo);
   const toDoList = JSON.parse(localStorage.getItem("todo")) || [];
+  const containerRef = useRef(null);
   console.log(toDoList);
   const date = new Date();
   useEffect(() => {
@@ -33,7 +34,10 @@ export function Home({ weather, news, setNews, setWeather }) {
     loadData();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  function scroll() {
+    const containerElem = containerRef.current;
+    if (containerElem) containerElem.scrollTop = containerElem.scrollHeight;
+  }
   return (
     <div className="home-container">
       <ResetButton />
@@ -130,7 +134,7 @@ export function Home({ weather, news, setNews, setWeather }) {
           >
             <h3>Things To Do</h3>
             {toDoList.length > 0 ? (
-              <div className="todo-list-container">
+              <div className="todo-list-container" ref={containerRef}>
                 {toDoList.map((toDo, i) => {
                   return (
                     <div className="to-do" key={i}>
@@ -138,6 +142,7 @@ export function Home({ weather, news, setNews, setWeather }) {
                     </div>
                   );
                 })}
+                {scroll()}
               </div>
             ) : (
               <h3
