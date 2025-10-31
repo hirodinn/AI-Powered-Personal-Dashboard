@@ -19,7 +19,7 @@
   justify-content: center;
   background: transparent;
   color: var(--primary-font-color);
-  height: 50%;
+  height: 20%;
 }
 .todo-container input {
   width: 80%;
@@ -47,9 +47,16 @@
   outline: none;
 }
 .todo-container .todo-lists {
-  height: 50%;
+  height: 80%;
   border: 2px solid;
   width: 100%;
   overflow-y: scroll;
   scrollbar-width: none;
+  display: flex;
+  flex-direction: column;
+}
+.todo-container .todo-lists > div {
+  width: 100%;
+  padding: 10px;
+  border-bottom: 2px solid gray;
 }
