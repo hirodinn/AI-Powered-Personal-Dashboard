@@ -30,6 +30,7 @@
   border-radius: 15px;
   height: 35px;
   padding-left: 15px;
+  color: inherit;
 }
 .todo-container form button {
   height: 35px;
