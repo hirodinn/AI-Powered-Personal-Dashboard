@@ -132,7 +132,7 @@ export function Home({ weather, news, setNews, setWeather }) {
               navigate("todo");
             }}
           >
-            <h3>Things To Do</h3>
+            <h3 style={{ textAlign: "center" }}>Things To Do</h3>
             {toDoList.length > 0 ? (
               <div className="todo-list-container" ref={containerRef}>
                 {toDoList.map((toDo, i) => {
