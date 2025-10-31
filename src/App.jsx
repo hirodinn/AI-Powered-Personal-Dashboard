@@ -95,7 +95,7 @@ function App() {
 
   return (
     <>
-      {Object.entries(userInfo).length < 5 ? (
+      {Object.entries(userInfo).length < 4 ? (
         <Login />
       ) : (
         <div className={userInfo.darkMode ? "root dark-mode" : "root"}>

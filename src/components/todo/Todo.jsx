@@ -11,7 +11,7 @@ export function Todo() {
   );
   function addEntry(e) {
     e.preventDefault();
-    const temp = [...todoRedux, { id: todo.length, title: inputValue }];
+    const temp = [...todoRedux, { id: crypto.randomUUID(), title: inputValue }];
     setTodoRedux(temp);
     setTodo(temp);
     setInputValue("");

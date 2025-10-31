@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function EachTodo({ todo, each }) {
+export function EachTodo({ each }) {
   const [spoil, setSpoil] = useState(false);
   return (
     <div
@@ -10,11 +10,18 @@ export function EachTodo({ todo, each }) {
         if (!spoil) {
           localStorage.setItem(
             "todo",
-            JSON.stringify(todo.filter((t) => t.id !== each.id))
+            JSON.stringify(
+              JSON.parse(localStorage.getItem("todo")).filter(
+                (t) => t.id !== each.id
+              )
+            )
           );
           console.log("this is excuted");
         } else {
-          localStorage.setItem("todo", JSON.stringify(todo));
+          localStorage.setItem(
+            "todo",
+            JSON.stringify([...JSON.parse(localStorage.getItem("todo")), each])
+          );
         }
       }}
     >
