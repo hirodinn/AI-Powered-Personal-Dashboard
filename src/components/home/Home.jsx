@@ -96,7 +96,7 @@ export function Home({ weather, news, setNews, setWeather }) {
               navigate("weather");
             }}
           >
-            <h1>Eplore the weather all over the world</h1>
+            <h1>Explore the weather all over the world</h1>
           </div>
           <div
             className="news"
