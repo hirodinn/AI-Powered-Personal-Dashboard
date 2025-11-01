@@ -50,6 +50,7 @@
     var(--secondary-background-bold)
   );
   transition: all 0.3s;
+  cursor: pointer;
 }
 .home-container .grid-container > div:hover {
   box-shadow: 0 0 10px 3px var(--primary-hover-color);
@@ -88,7 +89,66 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
 }
+
+.home-container .grid-container .weather:hover {
+  /* transform: translateY(-5px); */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  /* background: linear-gradient(135deg, #6dd5ed, #2193b0); */
+}
+
+.home-container .grid-container .weather img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+  transition: transform 0.3s ease;
+}
+
+.home-container .grid-container .weather:hover img {
+  transform: rotate(10deg) scale(1.05);
+}
+
+.home-container .grid-container .weather h2 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.home-container .grid-container .weather p {
+  font-size: 14px;
+  margin-top: 8px;
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.home-container .grid-container .weather::before {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 120px;
+  height: 120px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.home-container .grid-container .weather::after {
+  content: "";
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+}
+
 .home-container .grid-container .news {
   grid-area: news;
   display: flex;

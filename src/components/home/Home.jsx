@@ -96,7 +96,17 @@ export function Home({ weather, news, setNews, setWeather }) {
               navigate("weather");
             }}
           >
-            <h1>Explore the weather all over the world</h1>
+            <div class="weather-content">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
+                alt="Weather Icon"
+              />
+              <h2>Explore World Weather</h2>
+              <p>
+                Click here to discover real-time weather updates from cities
+                around the globe.
+              </p>
+            </div>
           </div>
           <div
             className="news"
