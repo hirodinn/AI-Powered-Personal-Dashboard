@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
 import { useState } from "react";
-
+import { Button } from "../../Button";
 export function Sidebar() {
   const [expand, setExpand] = useState(true);
   return (
@@ -37,6 +37,7 @@ export function Sidebar() {
 
         <p>Todo</p>
       </NavLink>
+      <Button />
     </nav>
   );
 }
