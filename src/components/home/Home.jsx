@@ -171,7 +171,7 @@ export function Home({ weather, news, setNews, setWeather }) {
               navigate("gemini");
             }}
           >
-            <h1>Come Chat With Me</h1>
+            <h3 style={{ fontFamily: "Orbitron" }}>Come Chat With Me</h3>
             <img src="chat/chat.svg" className="left-chat" />
             <img src="chat/chat.svg" className="right-chat" />
           </div>
