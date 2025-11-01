@@ -6,14 +6,38 @@ export function Sidebar() {
   const [expand, setExpand] = useState(true);
   return (
     <nav className={`sidebar-nav ${expand && "expand-nav"}`}>
-      <button>
+      <button
+        onClick={() => {
+          setExpand(!expand);
+        }}
+      >
         <i className="" />
+        click
       </button>
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/football-news">Football News</NavLink>
-      <NavLink to="/weather">Weather</NavLink>
-      <NavLink to="/gemini">Gemini</NavLink>
-      <NavLink to="/todo">Todo</NavLink>
+      <NavLink to="/">
+        <i className="fa-solid fa-house" />
+        <p>Home</p>
+      </NavLink>
+      <NavLink to="/football-news">
+        <i className="fa-solid fa-newspaper" />
+
+        <p>Football News</p>
+      </NavLink>
+      <NavLink to="/weather">
+        <i className="fa-solid fa-cloud-sun" />
+
+        <p>Weather</p>
+      </NavLink>
+      <NavLink to="/gemini">
+        <i className="fa-solid fa-comments" />
+
+        <p>Gemini</p>
+      </NavLink>
+      <NavLink to="/todo">
+        <i className="fa-solid fa-list-check" />
+
+        <p>Todo</p>
+      </NavLink>
     </nav>
   );
 }

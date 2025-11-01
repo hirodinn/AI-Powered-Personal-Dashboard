@@ -26,8 +26,14 @@
   color: inherit;
   display: block;
   width: 100%;
-  text-align: center;
   padding: 1vw 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sidebar-nav a p {
+  display: none;
+  margin-left: 10px;
 }
 .sidebar-nav a:hover {
   background: linear-gradient(
@@ -38,4 +44,7 @@
 }
 .sidebar-nav.expand-nav {
   width: 180px;
+}
+.sidebar-nav.expand-nav a p {
+  display: block;
 }
