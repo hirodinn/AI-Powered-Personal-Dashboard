@@ -6,7 +6,7 @@ import { Login } from "./components/login/Login";
 import { Home } from "./components/home/Home";
 import { FootballNews } from "./components/football-news/FootballNews.jsx";
 import { Weather } from "./components/weather/Weather.jsx";
-import { Sidebar } from "./components/gemini/Sidebar";
+import { GeminiSideBar } from "./components/gemini/GeminiSideBar";
 import { MainPage } from "./components/gemini/MainPage";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import "./App.css";
@@ -120,7 +120,7 @@ function App() {
               path="/gemini"
               element={
                 <div className="gemini-total-container">
-                  <Sidebar
+                  <GeminiSideBar
                     show={show}
                     setShow={setShow}
                     historyData={historyData}
