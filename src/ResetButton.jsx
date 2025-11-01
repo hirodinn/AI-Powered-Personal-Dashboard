@@ -1,5 +1,6 @@
 import { useDispatch } from "react-redux";
 import { reset } from "./redux/userInfoAction";
+import "./ResetButton.css";
 export function ResetButton() {
   const dispatch = useDispatch();
   return (
@@ -7,7 +8,7 @@ export function ResetButton() {
       onClick={() => {
         dispatch(reset());
       }}
-      style={{ position: "absolute", top: "10px", right: "10px" }}
+      className="reset-button"
     >
       Reset Credentials
     </button>

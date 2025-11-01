@@ -95,12 +95,6 @@
   transition: all 0.4s ease;
 }
 
-.home-container .grid-container .weather:hover {
-  /* transform: translateY(-5px); */
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
-  /* background: linear-gradient(135deg, #6dd5ed, #2193b0); */
-}
-
 .home-container .grid-container .weather img {
   width: 90px;
   height: 90px;

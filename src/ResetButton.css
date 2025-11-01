@@ -1,0 +1,15 @@
+.reset-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background-bold) 70%,
+    var(--secondary-background-bold)
+  );
+  border: none;
+  padding: 6px 12px;
+  color: var(--primary-font-color);
+  cursor: pointer;
+  font-size: 15px;
+}
