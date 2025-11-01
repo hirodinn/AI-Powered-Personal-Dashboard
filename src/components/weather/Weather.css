@@ -14,7 +14,6 @@
   width: 90%;
   max-width: 600px;
   height: 370px;
-  border: 2px solid;
   background: linear-gradient(
     45deg,
     var(--primary-background-bold) 70%,
