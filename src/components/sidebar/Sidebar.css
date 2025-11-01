@@ -13,13 +13,18 @@
   );
   color: var(--primary-font-color);
   min-height: 100vh;
-  padding-top: 30px;
+  padding-top: 50px;
 }
 .sidebar-nav button {
   border: none;
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: calc(50% - 25px);
+  background: transparent;
+  color: inherit;
+  font-size: 24px;
+  cursor: pointer;
+  width: 50px;
 }
 .sidebar-nav a {
   text-decoration: none;
@@ -44,6 +49,9 @@
 }
 .sidebar-nav.expand-nav {
   width: 180px;
+}
+.sidebar-nav.expand-nav button {
+  right: 10px;
 }
 .sidebar-nav.expand-nav a p {
   display: block;

@@ -11,8 +11,7 @@ export function Sidebar() {
           setExpand(!expand);
         }}
       >
-        <i className="" />
-        click
+        <i className="fa-solid fa-bars" />
       </button>
       <NavLink to="/">
         <i className="fa-solid fa-house" />
