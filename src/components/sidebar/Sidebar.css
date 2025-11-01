@@ -6,10 +6,36 @@
   white-space: nowrap;
   overflow: hidden;
   position: relative;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background-bold) 70%,
+    var(--secondary-background-bold)
+  );
   color: var(--primary-font-color);
-  border: 2px solid;
   min-height: 100vh;
+  padding-top: 30px;
 }
-.sidebar-nav .expand-side-bar {
+.sidebar-nav button {
+  border: none;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+.sidebar-nav a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1vw 0;
+}
+.sidebar-nav a:hover {
+  background: linear-gradient(
+    45deg,
+    var(--primary-background) 70%,
+    var(--secondary-background)
+  );
+}
+.sidebar-nav.expand-nav {
   width: 180px;
 }
