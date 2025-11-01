@@ -3,7 +3,7 @@ import "./Sidebar.css";
 
 export function Sidebar() {
   return (
-    <nav>
+    <nav className="sidebar-nav">
       <NavLink to="/">Home</NavLink>
       <NavLink to="/football-news">Football News</NavLink>
       <NavLink to="/weather">Weather</NavLink>

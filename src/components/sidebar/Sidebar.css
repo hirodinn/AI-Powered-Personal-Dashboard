@@ -1,0 +1,15 @@
+.sidebar-nav {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  color: var(--primary-font-color);
+  border: 2px solid;
+  min-height: 100vh;
+}
+.sidebar-nav .expand-side-bar {
+  width: 180px;
+}

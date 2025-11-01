@@ -8,8 +8,12 @@
     var(--secondary-background-bold)
   );
   border: none;
-  padding: 6px 12px;
+  padding: 6px 15px;
   color: var(--primary-font-color);
   cursor: pointer;
   font-size: 15px;
+  border-radius: 20px;
+}
+.reset-button:hover {
+  box-shadow: 0 0 8px 3px var(--primary-hover-color);
 }
