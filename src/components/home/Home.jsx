@@ -12,20 +12,26 @@ export function Home({ weather, news, setNews, setWeather }) {
   const containerRef = useRef(null);
   const date = new Date();
   useEffect(() => {
-    async function loadData() {
-      try {
-        let response = await axios.get(
+    function loadData() {
+      async function loadWeather() {
+        const response = await axios.get(
           `https://api.openweathermap.org/data/2.5/weather?q=${
             userInfo.city
           }&appid=${import.meta.env.VITE_WEATHER_API_KEY}&units=metric`
         );
         setWeather(response.data);
-        response = await axios.get(
+      }
+      async function loadNews() {
+        const response = await axios.get(
           `https://newsapi.org/v2/everything?q=${
             userInfo["Topic News"]
           }&language=en&apiKey=${import.meta.env.VITE_FOOTBALL_NEWS_API_KEY}`
         );
         setNews(response.data.articles);
+      }
+      try {
+        loadNews();
+        loadWeather();
       } catch (error) {
         console.error("Error fetching weather:", error);
       }
