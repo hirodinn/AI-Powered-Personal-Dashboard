@@ -13,6 +13,7 @@
     var(--primary-background-bold) 70%,
     var(--secondary-background-bold)
   );
+  border-right: 2px solid gray;
 }
 .side-bar.expand-side-bar {
   width: 180px;
@@ -23,7 +24,7 @@
 }
 .side-bar.expand-side-bar p {
   display: block;
-  font-size: 15px !important;
+  font-size: 15px;
 }
 
 .side-bar > div {
@@ -81,6 +82,7 @@
 }
 
 .side-bar .bottom-side-bar {
+  width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -99,7 +101,9 @@
   display: flex;
   width: 100%;
   justify-content: center;
+  align-items: center;
 }
+
 .side-bar .bottom-side-bar a:hover {
   background: linear-gradient(
     45deg,
@@ -116,8 +120,7 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .side-bar.expand-side-bar .bottom-side-bar {
-    display: block;
-    padding-left: 15px;
+  .side-bar.expand-side-bar .bottom-side-bar a {
+    font-size: 10px;
   }
 }

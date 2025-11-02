@@ -11,9 +11,10 @@ export function Login() {
         () => {
           currentInput.current.focus();
         },
-        current != 0 ? 1000 : 0
+        current != 0 ? 700 : 0
       );
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentInput]);
   const infos = [
     {

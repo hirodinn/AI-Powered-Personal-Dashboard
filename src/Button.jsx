@@ -9,7 +9,6 @@ export function Button() {
       className={`slider-Container ${darkMode && "change-color"}`}
       onClick={() => {
         dispatch(makeDark({ darkMode: !darkMode }));
-        console.log(darkMode);
       }}
     >
       <div className="slide"></div>
