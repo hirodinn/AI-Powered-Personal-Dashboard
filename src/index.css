@@ -17,7 +17,7 @@
 
     transparent 100%
   );
-  --primary-white-color: rgb(245, 252, 253);
+  --primary-white-color: rgb(255, 221, 252);
 }
 * {
   font-family: "Poppins", sans-serif;
@@ -45,7 +45,7 @@
   --primary-font-color: #fff4f4;
   --primary-hover-color: #93d0ff41;
   --primary-heading-color: #85b5db;
-  --primary-white-color: rgb(11, 25, 27);
+  --primary-white-color: #85b5db;
   --primary-sun: radial-gradient(
     closest-corner circle,
     #ccc,
