@@ -26,8 +26,8 @@ export function Login() {
       description: "Enter Your Current City",
     },
     {
-      type: "Football Team",
-      description: "Enter Your Favorite FootBall Team",
+      type: "Topic News",
+      description: "Enter Your Topic Of News",
     },
   ];
   return (

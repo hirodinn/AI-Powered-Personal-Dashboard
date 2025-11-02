@@ -148,6 +148,7 @@
   display: flex;
   flex-direction: column;
   padding: 15px;
+  text-align: center;
 }
 .home-container .grid-container .news .article-container {
   width: 100%;

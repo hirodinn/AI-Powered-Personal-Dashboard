@@ -6,7 +6,7 @@ export function FootballNews({ news }) {
     <div className="football-news-container">
       <Sidebar />
       <div className="football-news">
-        <h1>Football news</h1>
+        <h1>News</h1>
         {news &&
           news.map((article, i) => {
             return (

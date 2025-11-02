@@ -38,7 +38,7 @@ export function GeminiSideBar({
         <NavLink to="/football-news">
           <i className="fa-solid fa-newspaper" />
 
-          <p>Football News</p>
+          <p>News</p>
         </NavLink>
         <NavLink to="/weather">
           <i className="fa-solid fa-cloud-sun" />

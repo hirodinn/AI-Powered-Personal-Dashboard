@@ -110,7 +110,7 @@ function App() {
               />
             }
           />
-          <Route path="/football-news" element={<FootballNews news={news} />} />
+          <Route path="/news" element={<FootballNews news={news} />} />
           <Route path="/weather" element={<Weather />} />
           <Route
             path="/gemini"

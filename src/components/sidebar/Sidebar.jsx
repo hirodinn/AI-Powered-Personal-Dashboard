@@ -17,10 +17,10 @@ export function Sidebar() {
         <i className="fa-solid fa-house" />
         <p>Home</p>
       </NavLink>
-      <NavLink to="/football-news">
+      <NavLink to="/news">
         <i className="fa-solid fa-newspaper" />
 
-        <p>Football News</p>
+        <p>News</p>
       </NavLink>
       <NavLink to="/weather">
         <i className="fa-solid fa-cloud-sun" />
