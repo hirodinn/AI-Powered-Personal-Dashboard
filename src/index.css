@@ -8,6 +8,15 @@
   --primary-font-color: #03070a;
   --primary-hover-color: #03070a41;
   --primary-heading-color: #09141d;
+  --primary-sun: radial-gradient(
+    closest-corner circle,
+    #ffcf33,
+    #ffcf33 20%,
+    #ffff66 21%,
+    transparent 70%,
+
+    transparent 100%
+  );
   --primary-white-color: rgb(245, 252, 253);
 }
 * {
@@ -37,6 +46,14 @@
   --primary-hover-color: #93d0ff41;
   --primary-heading-color: #85b5db;
   --primary-white-color: rgb(11, 25, 27);
+  --primary-sun: radial-gradient(
+    closest-corner circle,
+    #ccc,
+    #ccc 20%,
+    #445 21%,
+    transparent 70%,
+    var(--primary-background) 100%
+  );
 }
 .gemini-total-container {
   display: flex;

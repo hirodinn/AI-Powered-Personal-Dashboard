@@ -20,6 +20,16 @@
   );
   position: relative;
 }
+.login-container .each-login-page::before {
+  content: "";
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--primary-sun);
+}
 .login-container .each-login-page .mode-button {
   position: absolute;
   right: 10px;
@@ -31,6 +41,7 @@
   align-items: center;
   width: 90vw;
   max-width: 500px;
+  z-index: 10;
 }
 .login-container .each-login-page form input {
   height: 40px;
