@@ -94,48 +94,43 @@ function App() {
   //GEMINI END
 
   return (
-    <>
+    <div className={userInfo.darkMode ? "root dark-mode" : "root"}>
       {Object.entries(userInfo).length < 4 ? (
         <Login />
       ) : (
-        <div className={userInfo.darkMode ? "root dark-mode" : "root"}>
-          <Routes>
-            <Route
-              index
-              element={
-                <Home
-                  weather={weather}
-                  news={news}
-                  setWeather={setWeather}
-                  setNews={setNews}
+        <Routes>
+          <Route
+            index
+            element={
+              <Home
+                weather={weather}
+                news={news}
+                setWeather={setWeather}
+                setNews={setNews}
+              />
+            }
+          />
+          <Route path="/football-news" element={<FootballNews news={news} />} />
+          <Route path="/weather" element={<Weather />} />
+          <Route
+            path="/gemini"
+            element={
+              <div className="gemini-total-container">
+                <GeminiSideBar
+                  show={show}
+                  setShow={setShow}
+                  historyData={historyData}
+                  sendMessage={sendMessage}
+                  reset={reset}
                 />
-              }
-            />
-            <Route
-              path="/football-news"
-              element={<FootballNews news={news} />}
-            />
-            <Route path="/weather" element={<Weather />} />
-            <Route
-              path="/gemini"
-              element={
-                <div className="gemini-total-container">
-                  <GeminiSideBar
-                    show={show}
-                    setShow={setShow}
-                    historyData={historyData}
-                    sendMessage={sendMessage}
-                    reset={reset}
-                  />
-                  <MainPage show={show} sendMessage={sendMessage} data={data} />
-                </div>
-              }
-            />
-            <Route path="todo" element={<Todo />} />
-          </Routes>
-        </div>
+                <MainPage show={show} sendMessage={sendMessage} data={data} />
+              </div>
+            }
+          />
+          <Route path="todo" element={<Todo />} />
+        </Routes>
       )}
-    </>
+    </div>
   );
 }
 

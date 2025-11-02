@@ -4,15 +4,8 @@
   width: fit-content;
   transition: transform 1s ease-in-out;
   color: var(--primary-font-color);
-  background: linear-gradient(
-    45deg,
-    var(--primary-background) 55%,
-    var(--secondary-background)
-  );
 }
-.login-container.dark {
-  background: linear-gradient(45deg, #071016 55%, #1c232f);
-}
+
 .login-container .each-login-page {
   min-width: 100vw;
   height: 100%;
@@ -20,6 +13,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background) 55%,
+    var(--secondary-background)
+  );
 }
 .login-container .each-login-page form {
   display: flex;
@@ -49,6 +47,7 @@
   background-color: #500201;
   box-shadow: 0 4px 2px #500201;
   cursor: pointer;
+  color: inherit;
 }
 .login-container .each-login-page form button:active {
   box-shadow: none;
