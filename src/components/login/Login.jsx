@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EachLoginPage from "./EachLoginPage";
+import { Button } from "../../Button";
 import "./Login.css";
 export function Login() {
   const [current, setCurrent] = useState(0);
@@ -19,20 +20,25 @@ export function Login() {
     },
   ];
   return (
-    <div
-      className="login-container"
-      style={{ transform: `translateX(-${100 * current}vw)` }}
-    >
-      {infos.map((info, i) => {
-        return (
-          <EachLoginPage
-            info={info}
-            key={i}
-            setCurrent={setCurrent}
-            index={i}
-          />
-        );
-      })}
+    <div className="login-top">
+      <div className="mode-button">
+        <Button />
+      </div>
+      <div
+        className="login-container"
+        style={{ transform: `translateX(-${100 * current}vw)` }}
+      >
+        {infos.map((info, i) => {
+          return (
+            <EachLoginPage
+              info={info}
+              key={i}
+              setCurrent={setCurrent}
+              index={i}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }

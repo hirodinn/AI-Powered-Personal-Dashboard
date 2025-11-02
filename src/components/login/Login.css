@@ -1,3 +1,16 @@
+.login-top {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: var(--primary-sun);
+  position: relative;
+}
+.login-top .mode-button {
+  z-index: 10;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
 .login-container {
   height: 100vh;
   display: flex;
@@ -13,27 +26,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    45deg,
-    var(--primary-background) 55%,
-    var(--secondary-background)
-  );
   position: relative;
-}
-.login-container .each-login-page::before {
-  content: "";
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: var(--primary-sun);
-}
-.login-container .each-login-page .mode-button {
-  position: absolute;
-  right: 10px;
-  top: 10px;
 }
 .login-container .each-login-page form {
   display: flex;

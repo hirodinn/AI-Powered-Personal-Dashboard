@@ -1,7 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
 import { add } from "../../redux/userInfoAction";
-import { Button } from "../../Button";
 export default function EachLoginPage({ info, index, setCurrent }) {
   const [inputValue, setInputValue] = useState("");
   const dispatch = useDispatch();
@@ -16,9 +15,6 @@ export default function EachLoginPage({ info, index, setCurrent }) {
   }
   return (
     <div className="each-login-page">
-      <div className="mode-button">
-        <Button />
-      </div>
       <h1>{info.description.slice(11)}</h1>
       <form onSubmit={handleSubmit}>
         <input

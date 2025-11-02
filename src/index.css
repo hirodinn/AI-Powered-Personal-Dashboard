@@ -9,10 +9,10 @@
   --primary-hover-color: #03070a41;
   --primary-heading-color: #09141d;
   --primary-sun: radial-gradient(
-    closest-corner circle,
+    closest-corner circle at 5% 9%,
     #ffcf33,
-    #ffcf33 20%,
-    #ffff66 21%,
+    #ffcf33 25%,
+    #ffff66 26%,
     transparent 70%,
 
     transparent 100%
@@ -47,11 +47,11 @@
   --primary-heading-color: #85b5db;
   --primary-white-color: #85b5db;
   --primary-sun: radial-gradient(
-    closest-corner circle,
+    closest-corner circle at 5% 9%,
     #ccc,
-    #ccc 20%,
-    #445 21%,
-    transparent 70%,
+    #ccc 25%,
+    #445 26%,
+    transparent 80%,
     var(--primary-background) 100%
   );
 }

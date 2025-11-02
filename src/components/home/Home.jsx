@@ -96,7 +96,7 @@ export function Home({ weather, news, setNews, setWeather }) {
               navigate("weather");
             }}
           >
-            <div class="weather-content">
+            <div className="weather-content">
               <img
                 src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png"
                 alt="Weather Icon"
