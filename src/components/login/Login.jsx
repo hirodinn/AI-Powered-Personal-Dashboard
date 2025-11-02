@@ -1,10 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import EachLoginPage from "./EachLoginPage";
 import { Button } from "../../Button";
 import "./Login.css";
 export function Login() {
   const [current, setCurrent] = useState(0);
-
+  const [currentInput, setCurrentInput] = useState(null);
+  useEffect(() => {
+    if (currentInput && currentInput.current) {
+      setTimeout(
+        () => {
+          currentInput.current.focus();
+        },
+        current != 0 ? 1000 : 0
+      );
+    }
+  }, [currentInput]);
   const infos = [
     {
       type: "name",
@@ -35,6 +45,8 @@ export function Login() {
               key={i}
               setCurrent={setCurrent}
               index={i}
+              setCurrentInput={setCurrentInput}
+              current={current}
             />
           );
         })}
