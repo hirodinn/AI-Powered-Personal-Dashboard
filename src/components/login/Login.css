@@ -18,6 +18,12 @@
     var(--primary-background) 55%,
     var(--secondary-background)
   );
+  position: relative;
+}
+.login-container .each-login-page .mode-button {
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 .login-container .each-login-page form {
   display: flex;
@@ -30,10 +36,11 @@
   height: 40px;
   width: 100%;
   font-size: 23px;
-  border-radius: 10px;
+  border-radius: 20px;
   padding-left: 15px;
   outline: none;
-  border: 2px solid #500201;
+  border: none;
+  box-shadow: 0 0 10px 2px var(--primary-hover-color);
   margin: 13px 0;
 }
 .login-container .each-login-page form input:focus {
@@ -44,11 +51,18 @@
   font-size: 23px;
   padding: 3px;
   border: none;
-  background-color: #500201;
-  box-shadow: 0 4px 2px #500201;
+  background: linear-gradient(
+    45deg,
+    var(--primary-background-bold) 55%,
+    var(--secondary-background-bold)
+  );
   cursor: pointer;
   color: inherit;
+  border-radius: 20px;
+}
+.login-container .each-login-page form button:hover {
+  box-shadow: 0 2px 7px var(--primary-hover-color);
 }
 .login-container .each-login-page form button:active {
-  box-shadow: none;
+  transform: translateY(1px);
 }
