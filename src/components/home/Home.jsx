@@ -10,7 +10,6 @@ export function Home({ weather, news, setNews, setWeather }) {
   const userInfo = useSelector((state) => state.userInfo);
   const toDoList = JSON.parse(localStorage.getItem("todo")) || [];
   const containerRef = useRef(null);
-  console.log(toDoList);
   const date = new Date();
   useEffect(() => {
     async function loadData() {
@@ -23,7 +22,7 @@ export function Home({ weather, news, setNews, setWeather }) {
         setWeather(response.data);
         response = await axios.get(
           `https://newsapi.org/v2/everything?q=${
-            userInfo.footballTeam
+            userInfo["Football Team"]
           }&language=en&apiKey=${import.meta.env.VITE_FOOTBALL_NEWS_API_KEY}`
         );
         setNews(response.data.articles);
